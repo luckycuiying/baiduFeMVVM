@@ -3,8 +3,8 @@
 // 2, var拥有变量提升
 // 3,var不支持块级作用域
 // 4,var不能用于定义常量
-
-
+//Es6 转成Es5
+//https://babeljs.io/repl/#?babili=false&browsers=&build=&builtIns=false&spec=false&loose=false&code_lz=GYewTgBAFANgpgFwgSwgXggBgNwogHggGZdkBqMgSggG8AoCRiAZ0QBVkBbOEAVwShRqaAHy0GTSQGMQAO2Yh4AOhggA5lGTUA9NqwAaAIz6ATBMYBffREOY7lbHToWgA&debug=false&forceAllTransforms=false&shippedProposals=false&circleciRepo=&evaluate=true&fileSize=false&sourceType=module&lineWrap=false&presets=es2015%2Creact%2Cstage-2&prettier=false&targets=&version=6.26.0&envVersion=
 
 // 1.1 重复定义变量
 let name = 'licuiying';
@@ -25,10 +25,11 @@ if (true) {
 }
 console.log(name); // ReferenceError: name is not defined
 
-//1.4 定义常量 
+//1.4 定义常量 : 定义了之后不能改
 const PI = 3.14;
 PI = 3.15; // TypeError: Assignment to constant variable
 
+// 虽然说常用不能在引用别的对象， 但是它的值如果是一个引用类型的话，引用的属性值还是可以修改
 const SCHOOL = { name: 'cuiying' };
 SCHOOL.name = 'li';
 不能给常量重新赋值, 如果是引用空间的话可以进行修改
