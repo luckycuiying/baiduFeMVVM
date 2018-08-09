@@ -1,9 +1,9 @@
 
 import * as types from '../action-types'
 function todo(state=[],action) {
-    swicth(action.type){
+    swicth(action.types){
         case types.ADDTODO:
-        return [..state,action.text]
+        return [..state,action.content]
     }
     return state;
 }

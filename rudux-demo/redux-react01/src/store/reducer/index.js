@@ -1,8 +1,8 @@
 import counter from './counter'
 import todo from './todo'
-import { combineReducer }  from 'redux'
+import { combineReducers }  from '../redux'
 
-let reducers = combineReducer({
+let reducers = combineReducers({
     counter,
     todo
 })

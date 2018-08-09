@@ -1,6 +1,6 @@
 import { createStore,combineReducers } from '../redux';
 
-function counter(state={number:0},action) {
+function counter(state={number:100},action) {
     switch(action.type){
         case 'ADD':
         return {number:state.number+action.count}

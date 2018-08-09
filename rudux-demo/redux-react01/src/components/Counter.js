@@ -31,9 +31,10 @@ export default class Counter extends Component{
         })
     }
     render(){
+        console.log(this.state.n)
         return <div>
             <button onClick ={this.add} >+</button>
-            <span>{ store.getState().counter.number}</span>
+            <span>{this.state.n}</span>
             <button onClick = { this.minus}>-</button>
         </div>
     }
